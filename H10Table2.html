@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 셀병합 </h2>    
+    <!-- table>tr*3>td*3 -->
+     <table border="1" width="300">
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+        </tr>
+     </table>
+
+     <h2> 1행의 3개의 셀을 병합 - colspan속성사용 </h2>
+     <!-- table>tr*3>td*3 -->
+    <!-- 
+    colspan : 열과 열을 병합한다. 이때 합쳐진 열의 크기만큼
+        tb태그가 제거되어야 한다. 
+    -->
+     <table border="1" width="300">
+        <tr>
+            <td colspan="3">1행1열</td>
+            <!-- <td>1행2열</td>
+             <td>1행3열</td> -->
+         
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td colspan="2">3행2열</td>
+            <!-- <td>3행3열</td> -->
+        </tr>
+     </table>
+
+     <h2> 2행2열과 3행2열을 병합 - rowspan속성사용 </h2>
+     <!-- 
+        rowspan : 행과 행을 병합할때 사용한다. 이대는 tr사이의 td를
+            적절히 제거해야한다.
+     -->
+     <!-- table>tr*3>td*3 -->
+     <table border="1" width="300">
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+         
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td rowspan="2">2행2열</td>
+            <td>2행3열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <!-- <td>3행2열</td> -->
+            <td>3행3열</td>
+        </tr>
+     </table>
+</body>
+</html>
+
+
+
+
+
+<h3>[퀴즈] 비정형 테이블 만들기</h3>
+<table border="1" width="300" cellspacing="0" cellpadding="5" style="text-align: center;">
+    <tr>
+        <td rowspan="3">A</td>
+        <td colspan="2">B</td>
+        <!-- <td></td> -->
+
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <td rowspan="2">C</td>
+        <td>D</td>
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <!-- <td></td> -->
+        <td>E</td>
+    </tr>
+</table>
